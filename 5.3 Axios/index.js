@@ -29,7 +29,7 @@ app.post("/", async (req, res) => {
     console.log(data);
     res.render('index.ejs',{data: data}); 
   } catch (error) {
-    console.log(typeof error.response.status)
+    console.log(error.response.status)
     if (error.response.status===404 ) {
       res.render('index.ejs',{error: "No activities that match your criteria."})  
     } else {
